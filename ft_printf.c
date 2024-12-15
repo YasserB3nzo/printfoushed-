@@ -6,7 +6,7 @@
 /*   By: ybenzidi <ybenzidi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/12 22:24:08 by ybenzidi          #+#    #+#             */
-/*   Updated: 2024/12/13 19:07:44 by ybenzidi         ###   ########.fr       */
+/*   Updated: 2024/12/15 16:53:32 by ybenzidi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,22 +27,22 @@ int	ft_putstr(const char *str)
 		write(1, &str[count], 1);
 		count++;
 	}
-	return (count);
+	return (count + 1);
 }
 
-int	putpointer(unsigned long ptr_address)
+int	putpointer(void	*ptr_address)
 {
 	int	count;
 
 	count = 0;
 	if (!ptr_address)
 	{
-		write(1, "(null)", 6);
-		return (6);
+		write(1, "(nil)", 5);
+		return (5);
 	}
 	write(1, "0x", 2);
 	count += 2;
-	count += putnbrbase(ptr_address, "0123456789abcdef", 16);
+	count += putnbrbase((unsigned long)ptr_address, "0123456789abcdef", 16);
 	return (count);
 }
 

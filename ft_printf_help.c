@@ -12,23 +12,9 @@
 
 #include "ft_printf.h"
 
-int	checkchar(char c, va_list args)
+int	checkchar(int c)
 {
-	char	x;
-
-	if (c == 'c')
-	{
-		x = (char)va_arg(args, int);
-		write(1, &x, 1);
-		return (1);
-	}
-	else if (c == '%')
-	{
-		write(1, "%", 1);
-		return (1);
-	}
-	else
-		return (-1);
+	return (write(1, &c, 1));
 }
 
 int	checkputnbr(long *number)
