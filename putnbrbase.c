@@ -6,7 +6,7 @@
 /*   By: ybenzidi <ybenzidi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/12 23:24:20 by ybenzidi          #+#    #+#             */
-/*   Updated: 2024/12/15 15:39:32 by ybenzidi         ###   ########.fr       */
+/*   Updated: 2024/12/17 23:49:08 by ybenzidi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,5 +36,5 @@ int	putnbrbase(long number, const char *base, int base_length)
 		write(1, &result[i], 1);
 		count++;
 	}
-	return (count + 1);
+	return (count);
 }
