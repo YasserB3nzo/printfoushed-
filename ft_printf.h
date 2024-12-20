@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: ybenzidi <ybenzidi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/12/11 23:06:43 by ybenzidi          #+#    #+#             */
-/*   Updated: 2024/12/15 15:34:31 by ybenzidi         ###   ########.fr       */
+/*   Created: 2024/12/19 21:57:07 by ybenzidi          #+#    #+#             */
+/*   Updated: 2024/12/19 21:58:27 by ybenzidi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,9 @@
 
 # include <stdarg.h>
 # include <unistd.h>
+
+# define BASE_DECI "0123456789abcdef"
+# define BASE_HEXA "0123456789ABCDEF"
 
 int	ft_putstr(const char *str);
 int	putnbrbase(long number, const char *base, int base_length);
